@@ -16,6 +16,8 @@
   
 .nav-links {
     list-style: none;
+    display: flex;
+    gap: 1rem;
 }
   
 .nav-item a {
@@ -49,14 +51,12 @@
     padding: 3rem;
 }
 
-footer img {
-    width: 3%;
-}
 
 .flex-main {
     background-color: #F5F5F5;
     width: 100%;
     padding-right: 2.5rem;
+    display: flex;
 }
 
 .image-container{
@@ -72,9 +72,53 @@ footer img {
 }
 
 footer {
-    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 1rem;
-    background-color: #59D9A1;
+    background-color: #66e0a7; /* assuming this is your footer bg */
+    flex-wrap: wrap; /* in case screen is small */
 }
 
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+footer img {
+    width: 6.5%;
+
+    object-fit: contain;
+    margin-bottom: 0.25rem;
+}
+
+
 /* CODE YOUR FLEXBOXES HERE */
+/* Flexbox for the navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-basis: 20%;
+}
+
+/* Make the main content area a flex-wrap grid */
+.main-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-grow: 1; 
+    justify-content: center;
+}
+
+
